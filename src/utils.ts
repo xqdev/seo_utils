@@ -7,18 +7,18 @@ export interface SeoMetadata {
 const extractSeoMetadataFromPage = (page: string): SeoMetadata => {
     let title, description, keywords;
     let match;
-    match = /<title>([\s\S]+?)<\/title>/g.exec(page);
-    if (match !== null) {
+    match = /<title>([\s\S]*?)<\/title>/g.exec(page);
+    if (match !== null && match[1] !== '') {
         title = match[1];
     }
 
-    match = /<meta name="description" content="([\s\S]+?)">/g.exec(page);
-    if (match !== null) {
+    match = /<meta name="description" content="([\s\S]*?)">/g.exec(page);
+    if (match !== null && match[1] !== '') {
         description = match[1];
     }
 
-    match = /<meta name="keywords" content="([\s\S]+?)">/g.exec(page);
-    if (match !== null) {
+    match = /<meta name="keywords" content="([\s\S]*?)">/g.exec(page);
+    if (match !== null && match[1] !== '') {
         keywords = match[1];
     }
 
@@ -29,7 +29,7 @@ const extractSeoMetadataFromPage = (page: string): SeoMetadata => {
     }
 }
 
-const extractUrlsFromSitemap = (sitemap: string): String[] => {
+function extractUrlsFromSitemap (sitemap: string): string[] {
     let urls = [];
     const regex = /<loc>([\s\S]+?)<\/loc>/g
     while (true) {
@@ -44,7 +44,7 @@ const extractUrlsFromSitemap = (sitemap: string): String[] => {
     return urls;
 }
 
-module.exports = {
+export {
     extractSeoMetadataFromPage,
     extractUrlsFromSitemap
 }
