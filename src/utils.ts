@@ -30,7 +30,18 @@ const extractSeoMetadataFromPage = (page: string): SeoMetadata => {
 }
 
 const extractUrlsFromSitemap = (sitemap: string): String[] => {
-    return ['a']
+    let urls = [];
+    const regex = /<loc>([\s\S]+?)<\/loc>/g
+    while (true) {
+        const match = regex.exec(sitemap);
+        if (match !== null) {
+            urls.push(match[1]);
+        } else {
+            break;
+        }
+    }
+
+    return urls;
 }
 
 module.exports = {

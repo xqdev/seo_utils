@@ -41,4 +41,5 @@ test('extracts metadata correctly', () => {
 
 test('extracts sitemap links correctly', () => {
     expect(extractUrlsFromSitemap(sitemapTestFiles[0])).toMatchSnapshot()
+    expect(extractUrlsFromSitemap('')).toMatchObject([])
 })
