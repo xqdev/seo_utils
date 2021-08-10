@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extracts sitemap links correctly 1`] = `
+Array [
+  "a",
+]
+`;

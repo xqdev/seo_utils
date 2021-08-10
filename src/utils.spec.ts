@@ -1,20 +1,25 @@
 const fs = require('fs').promises;
 const path = require('path')
 
-const { extractSeoMetadataFromPage } = require('./utils')
+const { extractSeoMetadataFromPage, extractUrlsFromSitemap } = require('./utils')
 
 let metadataTestFiles = []
+let sitemapTestFiles = []
 
 beforeAll(async () => {
-    const testDataDir = path.join(__dirname, 'test_data')
-    const testFilenames = [
+    const testDataDir = path.join(__dirname, '__test_data__')
+    const metadataTestFilenames = [
         path.join(testDataDir, 'page_example_1.html'),
         path.join(testDataDir, 'page_example_2.html'),
         path.join(testDataDir, 'page_example_3.html'),
         path.join(testDataDir, 'invalid_page_1.html'),
     ]
+    const sitemapTestFilenames = [
+        path.join(testDataDir, 'test_sitemap_1.xml')
+    ]
 
-    metadataTestFiles = await Promise.all(testFilenames.map(filename => fs.readFile(filename, 'utf8')))
+    metadataTestFiles = await Promise.all(metadataTestFilenames.map(filename => fs.readFile(filename, 'utf8')))
+    sitemapTestFiles = await Promise.all(sitemapTestFilenames.map(filename => fs.readFile(filename, 'utf8')))
 });
 
 test('extracts metadata correctly', () => {
@@ -32,4 +37,8 @@ test('extracts metadata correctly', () => {
         keywords: 'пивной ресторан крафт пиво москва доставка еды русская кухня доставка обедов выездные банкеты ресторан русской кухни праздник доставка еды круглосуточно баранина шашлык  курицы ёрш пивной ресторан ёрш\n'
     })
     expect(extractSeoMetadataFromPage(metadataTestFiles[3])).toMatchObject({})
+})
+
+test('extracts sitemap links correctly', () => {
+    expect(extractUrlsFromSitemap(sitemapTestFiles[0])).toMatchSnapshot()
 })

@@ -30,8 +30,7 @@ const extractSeoMetadataFromPage = (page: string): SeoMetadata => {
 }
 
 const extractUrlsFromSitemap = (sitemap: string): String[] => {
-    // <loc>https://ersh.su/</loc>
-    return []
+    return ['a']
 }
 
 module.exports = {
