@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="yandex-verification" content="4200c3a5588b3560">
+    <link rel="icon" href="/favicon.ico?v=2" />
+    <title>Сеть пивных ресторанов «Ёрш» : Меню пивного ресторана для гурманов. Адреса пивных реторанов «Ёрш»  в Москве.
+</title>
+
+<meta name="description" content="В пивном ресторане Ёрш, вы можете заказать: 100 сортов крафтового пива, огромную коллекция блюд и закусок с гриля, мангала и коптильни и многие другие закуски к пиву. Приятно проведите время с друзьями под живую музыку и караоке. Закажите доставку еды, блюд русской кухни и обедов на дом.
+">
+<meta name="keywords" content="пивной ресторан крафт пиво москва доставка еды русская кухня доставка обедов выездные банкеты ресторан русской кухни праздник доставка еды круглосуточно баранина шашлык  курицы ёрш пивной ресторан ёрш
+">
+<link href="/assets/1f8b6147/css/app.css?v=1618928817" rel="stylesheet">
+<script src="/assets/51ca776c/jquery.min.js?v=1490036520"></script>
+<script src="/assets/54626e54/infoBubble.js?v=1550485006"></script>
+<script src="/assets/54626e54/restaurantsMap.js?v=1568121659"></script>
+<script src="/assets/bc68fe31/vue.min.js?v=1551452618"></script>
+<script src="/assets/2cf759f3/axios.min.js?v=1519082638"></script>
+<script src="/assets/b36b1d3c/yii.js?v=1521657413"></script>
+<!--[if lt IE 9]>
+<script src="/assets/1186140d/dist/html5shiv.min.js?v=1437422640"></script>
+<![endif]-->
+<script src="/assets/475d60b8/prompt.js?v=1577636831"></script>
+<script src="/assets/475d60b8/cookie.js?v=1545538735"></script>
+<script src="/assets/725b870/dist/inputmask.min.js?v=1549999569"></script>
+<script src="/assets/54626e54/analyticFunctions.js?v=1585326070"></script>
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="Y0kCKJuGzz-s36Y6i-pDbUW8gx_p0CkVWADw74yx89MtOk1D-cKmesG57XvIkwEJJtS7eY2HW2ExTYCb09KxnA==">
+<script>
+window.dataLayer = window.dataLayer||[];
+dataLayer.push({
+ 'City': 'Москва',
+});
+</script>
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQ6PL7R');</script>
+<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=0336b059-e5e2-4ad0-956c-cb087553e0dd" type="text/javascript"></script> -->
+<script id="breadcrumb_data" type="application/json">
+[]</script>
+</head>
+<body>
+<noscript><div><img src="https://mc.yandex.ru/watch/31937286" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQ6PL7R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js">
+</script>
+
+<script id="staticData" type="application/json">
+{"basket":{"items":[],"sum":{"total":0,"no_gift_total":0,"discount":0},"promocode":"","coupon":{"value":0},"cartId":0},"yii":{"path":"\/"},"mainMenu":{"\/":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","\/shop\/zakuski":"\u041c\u0435\u043d\u044e","\/page\/delivery":"\u041e \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0435","\/actions":"\u0410\u043a\u0446\u0438\u0438 \u0438 \u043d\u043e\u0432\u043e\u0441\u0442\u0438","\/page\/restaurants":"\u0420\u0435\u0441\u0442\u043e\u0440\u0430\u043d\u044b"},"user":{"isGuest":true}}</script>
+<div class="page-homepage js-container container shit" data-controller="homepage">
+<script>
+    var LunchPopup = function()
+    {
+        this.popup_id = 'lunch-error-popup';
+
+        this.open = function()
+        {
+            document.querySelector('#lunch-error-popup').classList.add('vue-popup')
+        };
+
+        this.close = function()
+        {
+            document.querySelector('#lunch-error-popup').classList.remove('vue-popup')
+        };
+    };
+
+    window.lunchPopup = new LunchPopup;
+</script>
+
+<!-- <div class="popup prompt prompt--field" class="vue-popup"> -->
+<div id="lunch-error-popup" class="popup prompt prompt--field">
+    <div class="prompt__centre" style="margin-top: 169px;">
+        <div class="prompt__window">
+            <div class="prompt__header">
+                <span class="prompt__title">Внимание</span>
+                <span class="prompt__close"></span>
+            </div>
+            <div class="popup-info">
+                Бизнес-ланч доступен для заказа с понедельника по пятницу с 12:00 до 16:00
+            </div>
+            <div class="prompt__footer">
+                <span class="prompt__button" style="width: 100%;">Закрыть</span>
+                <!-- <span onclick="location='/shop'" class="prompt__button" style="width: 100%;">В меню</span> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('#lunch-error-popup .prompt__close').addEventListener('click', function() {
+        window.lunchPopup.close();
+    });
+    document.querySelector('#lunch-error-popup .prompt__button').addEventListener('click', function() {
+        window.lunchPopup.close();
+    });
+</script>  <div id="vueMain">
+  <header class="js-header header" id="header">
+    <div class="header__wrapper">
+      <div class="header__interface">
+        <ul class="header-interface">
+          <li class="header-interface__item">
+            <span class="header-interface__space">
+              <button class="js-header--switcher header-interface__switcher" onClick="$('.js-container').toggleClass('sidebar--open');"></button>
+            </span>
+          </li>
+          <li class="header-interface__item">
+            <button class="header-interface__button" onClick="location.href='tel:+74996492223'">
+              <img src="/images/fill-call.svg" alt="" class="header-interface__icon">
+            </button>
+          </li>
+          <li v-if="models.user.isGuest" class="header-interface__item">
+            <span @click="popup.login = true" class="header-interface__button" id="login-mobile-popup-link">
+              <img src="/images/fill-account.svg" alt="" class="header-interface__icon">
+            </span>
+          </li>
+          <li v-else class="header-interface__item">
+            <!-- <a class="header-interface__button" href="/cabinet/profile">
+              <img src="/images/fill-account.svg" alt="" class="header-interface__icon">
+            </a> -->
+            <a class="header-interface__button">
+              <img src="/images/fill-account.svg" alt="" class="header-interface__icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__logo">
+        <div class="header-logo">
+          <a  class="header-logo__link">
+            <img src="/images/logo.svg" alt="" class="header-logo__image">
+          </a>
+        </div>
+      </div>
+      <div class="header__menu no-dragscroll">
+        <ul class="header-menu">
+          <li v-for="(item, index, key) in models.mainMenu" class="header-menu__item">
+            <span v-if="models.yii.path == index" class="header-menu__link">{{ item }}</span>
+            <a v-else :href="index" class="header-menu__link">{{ item }}</a>
+          </li>
+          <li @click="popup.login = true" v-if="models.user.isGuest" class="header-menu__item hide-desktop">
+            <a href="javascript:void(0)" class="header-menu__link">Войти</a>
+          </li>
+          <li v-else class="header-menu__item hide-desktop">
+            <a href="/cabinet/new#personalDataAnchor" class="header-menu__link">Личный кабинет</a>
+          </li>
+          <template v-if="userDataLoaded">
+          <li v-if="!models.user.isGuest" class="header-menu__item hide-desktop">
+            <a href="/cabinet/addressbook" class="header-menu__link">Адреса</a>
+          </li>
+          <li v-if="!models.user.isGuest" class="header-menu__item hide-desktop">
+            <a href="/cabinet/history" class="header-menu__link">Заказы</a>
+          </li>
+          <li v-if="!models.user.isGuest" class="hidden-lg hidden-md header-menu__item hide-desktop">
+            <a href="/cabinet/logout" class="header-menu__link">Выйти</a>
+          </li>
+          <li v-if="models.user.isGuest" class="header-menu__item profile" style="position: relative;">
+            <span @click="popup.login = true" class="header-menu__link pointer">
+              <img src="/images/fill-account.svg" alt="" class="header-menu__icon">
+            </span>
+            <!-- UNCOMMENT FOR DROPDOWN LIST AND LOYALITY LINK -->
+              <div v-if="models.user.isGuest" style="top: auto;" class="Profile-dropdown-temp">
+                  <ul class="Profile-dropdown-temp__list">
+                      <li @click="popup.login = true" class="Profile-dropdown-temp__item">
+                          <a href="javascript:void(0)" class="Profile-dropdown-temp__link">Войти</a>
+                      </li></ul></div>
+              <div v-else style="top: auto;" class="Profile-dropdown-temp">
+            <ul class="Profile-dropdown-temp__list">
+              <li class="Profile-dropdown-temp__item">
+                <a href="/cabinet/new" class="Profile-dropdown-temp__link">Личный кабинет</a>
+              </li></ul></div>
+              <!-- UNCOMMENT FOR DROPDOWN LIST AND LOYALITY LINK -->
+              </li>
+          </li>
+          <li v-else class="header-menu__item profile" style="position: relative;">
+          <a class="header-menu__link"> <!-- <a href="/cabinet/profile" class="header-menu__link"> -->
+          <img src="/images/fill-account.svg" alt="" class="header-menu__icon"> <!-- <span class="account_name"></span> --></a>
+          <div style="top: auto;" class="Profile-dropdown-temp"><ul class="Profile-dropdown-temp__list"><li class="Profile-dropdown-temp__item"><a href="/cabinet/new#personalDataAnchor" class="Profile-dropdown-temp__link">Личный кабинет</a></li> <li class="Profile-dropdown-temp__item"><a href="/cabinet/addressbook" class="Profile-dropdown-temp__link">Адреса</a></li> <!----> <li class="Profile-dropdown-temp__item"><a href="/cabinet/history" class="Profile-dropdown-temp__link">Заказы</a></li> <li class="Profile-dropdown-temp__item"><a href="/cabinet/logout" class="Profile-dropdown-temp__link">Выйти</a></li></ul></div></li>
+        </template>
+        </ul>
+        <!-- <div class="header-cities" style="padding-bottom: 20px;">
+          <span class="header-cities__value">Москва</span>
+          <img src="/images/down.svg" alt="" class="header-cities__icon"> WAS COMMENTED
+        </div> -->
+      </div>
+      <div class="header__cart">
+        <div class="header-cart">
+          <a href="/shop/basket" class="header-cart__link">
+            <img src="/images/cart.svg" alt="" class="header-cart__icon">
+            <span id="header-cart-amount" class="header-cart__amount">{{ models.basket.count }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="popup" :class="{'vue-popup': popup.login}">
+    <div class="popup__background" @click="popup.login = false"></div>
+    <div class="popup__content">
+      <div id="login-form" class="form-horizontal">
+        <div class="auth">
+          <div class="auth__header">
+            <span class="auth__title">Вход</span>
+            <span class="auth__close" @click="popup.login = false"></span>
+          </div>
+          <div class="auth__content">
+            <span class="auth__hint">Войдите, зарегистрируйтесь или <span class="new-link" @click="resendCode()">получите код заново</span></span>
+            <div class="form-group">
+              <label class="control-label">Телефон *</label>
+              <input id="loginPhoneMask" data-inputmask="'mask': '+7 (999) 999-9999'" type="text" v-model="form.phone" class="auth__field">
+              <div class="help-block">{{ errors.phone }}</div>
+            </div>
+            <div class="form-group" v-if="form.email !== null">
+              <label class="control-label">E-mail *</label>
+              <input type="text" v-model="form.email" class="auth__field">
+              <div class="help-block">{{ errors.email }}</div>
+            </div>
+            <div class="form-group" v-if="form.name !== null">
+              <label class="control-label">Имя *</label>
+              <input type="text" v-model="form.name" class="auth__field">
+              <div class="help-block">{{ errors.name }}</div>
+            </div>
+            <div class="form-group" v-if="form.code !== null">
+              <label class="control-label">Код *</label>
+              <input type="text" v-model="form.code" class="auth__field">
+              <div class="help-block">{{ errors.code }}</div>
+            </div>
+            <div class="form-group" v-if="form.birthday !== null">
+              <label class="control-label">День рождения</label>
+              <input min="1900-01-01" max="2021-08-10" type="date" v-model="form.birthday" class="auth__field">
+              <div class="help-block">{{ errors.birthday }}</div>
+            </div>
+            <div class="form-group" v-if="form.sex !== null">
+              <label class="control-label">Пол</label>
+              <select v-model="form.sex" class="auth__field">
+                <option value="0">Не установлен</option>
+                <option value="1">Мужской</option>
+                <option value="2">Женский</option>
+              </select>
+              <div class="help-block">{{ errors.sex }}</div>
+            </div>
+            <small style="font-size: 14px;" class="cart-label">* - обязательные поля для заполнения</small>
+            <span class="auth__button pointer" @click="proceed()">Далее</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <main class="main" id="main">
+    <!---->
+            
+<span id="city_id" style="display: none">1</span>
+
+
+<div id="bannerData" style="display: none;"> {"23":{"banner":{"id":"23","url":"\/actions\/dr","thumbnail_base_url":"https:\/\/ersh.su\/storage","thumbnail_path":"1\/-WFFms6s_0tEZvQjw9X_JUIVrktt_tMr.jpg","date_from":"2020-10-15 00:00:00","date_to":"2030-10-15 00:00:00","city_id":null,"sort":"8","video":"","created_at":"2019-10-23 15:25:18","updated_at":"2021-03-22 11:24:50"},"action":{"id":19,"title":"\u0414\u0420","slug":"dr"}},"112":{"banner":{"id":"112","url":"\/actions\/s-soboj","thumbnail_base_url":"https:\/\/ersh.su\/storage","thumbnail_path":"1\/sESR1APnHXYLQaXtRz_257Zri6ESIG0_.jpg","date_from":"2020-10-15 00:00:00","date_to":"2030-07-01 10:00:00","city_id":null,"sort":"6","video":"","created_at":"2020-10-16 21:12:49","updated_at":"2021-07-20 16:43:46"},"action":{"id":35,"title":"\u0421 \u0441\u043e\u0431\u043e\u0439","slug":"s-soboj"}},"80":{"banner":{"id":"80","url":"\/actions\/novickam-vezet","thumbnail_base_url":"https:\/\/ersh.su\/storage","thumbnail_path":"1\/eL5lTvUadHBxSHNu0rki3F-Ln93ibPTL.jpg","date_from":"2020-10-15 00:00:00","date_to":"2030-10-15 00:00:00","city_id":null,"sort":"7","video":"","created_at":"2019-12-11 15:41:02","updated_at":"2021-03-22 11:24:46"},"action":{"id":85,"title":"\u041d\u043e\u0432\u0438\u0447\u043a\u0430\u043c \u0432\u0435\u0437\u0435\u0442!","slug":"novickam-vezet"}},"130":{"banner":{"id":"130","url":"\/actions\/skidka-15-v-den-rozdenia-v-zale","thumbnail_base_url":"https:\/\/ersh.su\/storage","thumbnail_path":"1\/zgeIOflld9JFdYn_FJ6wkoEeJblDBdEP.jpg","date_from":"2021-02-09 16:35:00","date_to":"2030-01-31 07:00:00","city_id":null,"sort":"5","video":"","created_at":"2021-02-09 16:40:20","updated_at":"2021-03-22 11:24:40"},"action":{"id":135,"title":"\u0421\u043a\u0438\u0434\u043a\u0430 15% \u0432 \u0414\u0435\u043d\u044c \u0420\u043e\u0436\u0434\u0435\u043d\u0438\u044f \u0432 \u0437\u0430\u043b\u0435","slug":"skidka-15-v-den-rozdenia-v-zale"}},"144":{"banner":{"id":"144","url":"\/actions\/ostalos-tolko-pozarit","thumbnail_base_url":"https:\/\/ersh.su\/storage","thumbnail_path":"1\/HT-QOIHtu0Xjd8BTIbetkTL7pW_ga_nC.png","date_from":"2021-04-22 10:00:00","date_to":"2030-01-31 07:00:00","city_id":null,"sort":"3","video":"","created_at":"2021-04-19 13:24:37","updated_at":"2021-05-17 15:11:09"},"action":{"id":149,"title":"\u041e\u0441\u0442\u0430\u043b\u043e\u0441\u044c \u0442\u043e\u043b\u044c\u043a\u043e \u043f\u043e\u0436\u0430\u0440\u0438\u0442\u044c!","slug":"ostalos-tolko-pozarit"}},"150":{"banner":{"id":"150","url":"\/actions\/provedi-leto-so-vkusom","thumbnail_base_url":"https:\/\/ersh.su\/storage","thumbnail_path":"1\/Azm6uW-KHa3cP9Wau26AhG6sOZI0Etd7.jpg","date_from":"2021-06-01 07:00:00","date_to":"2021-09-30 23:59:00","city_id":null,"sort":"1","video":"","created_at":"2021-05-24 17:45:43","updated_at":"2021-06-01 08:18:00"},"action":{"id":155,"title":"\u041f\u0440\u043e\u0432\u0435\u0434\u0438 \u043b\u0435\u0442\u043e \u0441\u043e \u0432\u043a\u0443\u0441\u043e\u043c!","slug":"provedi-leto-so-vkusom"}}} </div>
+<div class="banner-outer">
+  <div class="js-homepage--promo owl-carousel promo">
+          <div data-banner-position="0" data-banner-id="150" class="promo__item">
+        <a href="/actions/provedi-leto-so-vkusom" class="promo__link">
+        <img src="/storage/1/Azm6uW-KHa3cP9Wau26AhG6sOZI0Etd7.jpg" alt="" class="promo__image--desktop" />
+        <img src="/storage/1/Azm6uW-KHa3cP9Wau26AhG6sOZI0Etd7.jpg" alt="" class="promo__image--mobile" />
+        <!-- <picture>
+          <source type="image/webp" srcset="/storage/1/Azm6uW-KHa3cP9Wau26AhG6sOZI0Etd7.webp">
+          <img src="/storage/1/Azm6uW-KHa3cP9Wau26AhG6sOZI0Etd7.jpg" alt="" class="promo__image--desktop" />
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="/storage/1/Azm6uW-KHa3cP9Wau26AhG6sOZI0Etd7.webp">
+          <img src="/storage/1/Azm6uW-KHa3cP9Wau26AhG6sOZI0Etd7.jpg" alt="" class="promo__image--mobile" />
+        </picture> -->
+        </a>
+      </div>
+                <div data-banner-position="1" data-banner-id="144" class="promo__item">
+        <a href="/actions/ostalos-tolko-pozarit" class="promo__link">
+        <img src="/storage/1/HT-QOIHtu0Xjd8BTIbetkTL7pW_ga_nC.png" alt="" class="promo__image--desktop" />
+        <img src="/storage/1/HT-QOIHtu0Xjd8BTIbetkTL7pW_ga_nC.png" alt="" class="promo__image--mobile" />
+        <!-- <picture>
+          <source type="image/webp" srcset="/storage/1/HT-QOIHtu0Xjd8BTIbetkTL7pW_ga_nC.webp">
+          <img src="/storage/1/HT-QOIHtu0Xjd8BTIbetkTL7pW_ga_nC.png" alt="" class="promo__image--desktop" />
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="/storage/1/HT-QOIHtu0Xjd8BTIbetkTL7pW_ga_nC.webp">
+          <img src="/storage/1/HT-QOIHtu0Xjd8BTIbetkTL7pW_ga_nC.png" alt="" class="promo__image--mobile" />
+        </picture> -->
+        </a>
+      </div>
+                <div data-banner-position="2" data-banner-id="130" class="promo__item">
+        <a href="/actions/skidka-15-v-den-rozdenia-v-zale" class="promo__link">
+        <img src="/storage/1/zgeIOflld9JFdYn_FJ6wkoEeJblDBdEP.jpg" alt="" class="promo__image--desktop" />
+        <img src="/storage/1/zgeIOflld9JFdYn_FJ6wkoEeJblDBdEP.jpg" alt="" class="promo__image--mobile" />
+        <!-- <picture>
+          <source type="image/webp" srcset="/storage/1/zgeIOflld9JFdYn_FJ6wkoEeJblDBdEP.webp">
+          <img src="/storage/1/zgeIOflld9JFdYn_FJ6wkoEeJblDBdEP.jpg" alt="" class="promo__image--desktop" />
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="/storage/1/zgeIOflld9JFdYn_FJ6wkoEeJblDBdEP.webp">
+          <img src="/storage/1/zgeIOflld9JFdYn_FJ6wkoEeJblDBdEP.jpg" alt="" class="promo__image--mobile" />
+        </picture> -->
+        </a>
+      </div>
+                <div data-banner-position="3" data-banner-id="112" class="promo__item">
+        <a href="/actions/s-soboj" class="promo__link">
+        <img src="/storage/1/sESR1APnHXYLQaXtRz_257Zri6ESIG0_.jpg" alt="" class="promo__image--desktop" />
+        <img src="/storage/1/sESR1APnHXYLQaXtRz_257Zri6ESIG0_.jpg" alt="" class="promo__image--mobile" />
+        <!-- <picture>
+          <source type="image/webp" srcset="/storage/1/sESR1APnHXYLQaXtRz_257Zri6ESIG0_.webp">
+          <img src="/storage/1/sESR1APnHXYLQaXtRz_257Zri6ESIG0_.jpg" alt="" class="promo__image--desktop" />
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="/storage/1/sESR1APnHXYLQaXtRz_257Zri6ESIG0_.webp">
+          <img src="/storage/1/sESR1APnHXYLQaXtRz_257Zri6ESIG0_.jpg" alt="" class="promo__image--mobile" />
+        </picture> -->
+        </a>
+      </div>
+                <div data-banner-position="4" data-banner-id="80" class="promo__item">
+        <a href="/actions/novickam-vezet" class="promo__link">
+        <img src="/storage/1/eL5lTvUadHBxSHNu0rki3F-Ln93ibPTL.jpg" alt="" class="promo__image--desktop" />
+        <img src="/storage/1/eL5lTvUadHBxSHNu0rki3F-Ln93ibPTL.jpg" alt="" class="promo__image--mobile" />
+        <!-- <picture>
+          <source type="image/webp" srcset="/storage/1/eL5lTvUadHBxSHNu0rki3F-Ln93ibPTL.webp">
+          <img src="/storage/1/eL5lTvUadHBxSHNu0rki3F-Ln93ibPTL.jpg" alt="" class="promo__image--desktop" />
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="/storage/1/eL5lTvUadHBxSHNu0rki3F-Ln93ibPTL.webp">
+          <img src="/storage/1/eL5lTvUadHBxSHNu0rki3F-Ln93ibPTL.jpg" alt="" class="promo__image--mobile" />
+        </picture> -->
+        </a>
+      </div>
+                <div data-banner-position="5" data-banner-id="23" class="promo__item">
+        <a href="/actions/dr" class="promo__link">
+        <img src="/storage/1/-WFFms6s_0tEZvQjw9X_JUIVrktt_tMr.jpg" alt="" class="promo__image--desktop" />
+        <img src="/storage/1/-WFFms6s_0tEZvQjw9X_JUIVrktt_tMr.jpg" alt="" class="promo__image--mobile" />
+        <!-- <picture>
+          <source type="image/webp" srcset="/storage/1/-WFFms6s_0tEZvQjw9X_JUIVrktt_tMr.webp">
+          <img src="/storage/1/-WFFms6s_0tEZvQjw9X_JUIVrktt_tMr.jpg" alt="" class="promo__image--desktop" />
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="/storage/1/-WFFms6s_0tEZvQjw9X_JUIVrktt_tMr.webp">
+          <img src="/storage/1/-WFFms6s_0tEZvQjw9X_JUIVrktt_tMr.jpg" alt="" class="promo__image--mobile" />
+        </picture> -->
+        </a>
+      </div>
+            </div>
+</div>
+<section class="section">
+  <div class="section__wrapper">
+  <!-- <picture>
+    <source type="image/webp" srcset="/storage/1/4RRYCb8Z-5gLyEvT3vTc4BMAZXvi7Yrl.webp">
+    <img src="/storage/1/4RRYCb8Z-5gLyEvT3vTc4BMAZXvi7Yrl.png" alt="Flowers" style="width:auto;">
+    <source media="(min-width: 650px)" srcset="img_pink_flowers.jpg">
+    <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+    <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+  </picture> -->
+    <span class="section__title">Меню</span>
+
+    <div id="catch-moment-template">
+<!--     <div v-if="catchMoment" id="catch-moment" class="catch_moment catch-moment-snippet" style="text-align: center; width: calc(100vw - 6px); margin-left: -1.5em;">
+      <div class="product-small__promo">
+        <div class="catch_counter">
+          <span class="catch_counter_text">Лови момент!&nbsp;</span>
+          <span class="catch_counter_value">{{ timer }}</span>
+        </div>
+      </div>
+      <div class="cart-item" v-if="catchMoment">
+        <div class="cart-item-left">
+          <div style="width: 35%; position: relative;">
+            <i class="categories-list__discount"></i>
+            <img style="width: 100%;" :src="item.preview" :alt="item.title">
+          </div>
+          <div class="cart-item-info">
+            <span class="cart-item-title" v-html="item.title" style="padding-top: 0;"></span>
+            <span class="cart-item-description" v-html="item.shortDescription" style="height: auto;"></span>
+          </div>
+        </div>
+        <div class="cart-item-right">
+          <div :class="amountClass(item)" style="float: left;">
+            <span @click="decrease(item)" class="amount__button amount__button--minus"></span>
+            <span class="amount__value">{{ item.number }}</span>
+            <span @click="increase(item)" class="amount__button amount__button--plus"></span>
+          </div>
+          <div class="cart-item-prices" style="float: left;">
+            <span class="cart-item-price-promo">{{ item.goodPrice }}</span>
+            <span class="cart-item-price">&nbsp;{{ item.price }}</span>
+            <span class="cart-item-currency">&nbsp;р.</span>
+          </div>
+        </div>
+      </div>
+      </div> -->
+
+      <div v-if="catchMoment" id="catch-moment" class="catch_moment catch-moment-snippet"
+    style="text-align: center;width: calc(100vw - 6px);margin-left: -1.5em;">
+    <div class="product-small__promo">
+        <div class="catch_counter">
+            <span class="catch_counter_text">Лови момент!&nbsp;</span>
+            <span class="catch_counter_value">{{timer}}</span>
+        </div>
+    </div>
+    <div class="product-small__main">
+        <div class="product-small__left" style="padding-right: 5%; width: 30%;">
+            <img :src="item.preview" :alt="item.title" class="snippets__image">
+        </div>
+        <div class="product-small__right"><a :href="'/shop/product/' + ((item !== false && 'good' in item) ? item.good.alias : '')">
+                <span class="product-small__title">{{item.title}}</span>
+                <p class="product-small__description">{{item.shortDescription}}</p>
+            </a>
+            <div class="product-small__pricesbuttons">
+                <div class="product-small__prices">
+                    <div class="cost">
+                        <span class="cost__price"
+                            style="text-decoration: line-through; opacity: 0.7; font-weight: 400;">{{item.goodPrice}}</span>
+                        <span class="cost__price">&nbsp;{{item.price}}</span>
+                        <span class="cost__currency"> р.</span>
+                    </div>
+                </div>
+                <div style="width: 40%;" class="product-small__buttons">
+                    <div :class="{'amount--active': (item.number > 0)}" class="amount">
+                        <button @click="decrease(item)" class="amount__button amount__button--minus"></button>
+                        <span class="amount__value">{{item.number}}</span>
+                        <button @click="increase(item)" class="amount__button amount__button--plus"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    
+    <div class="section__content" >
+      <ul class="menu">
+                  <li data-category-id="200" class="menu__item">
+            <a href="/shop/novinki" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/36dpLO3FjfHEiQy03VDoQS_5QGvTPiw0.webp">
+                <img src="/storage/1/36dpLO3FjfHEiQy03VDoQS_5QGvTPiw0.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Новинки</span>
+            </a>
+                      </li>
+                  <li data-category-id="8" class="menu__item">
+            <a href="/shop/zakuski" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/JExh4RAfDNEa-qYkEK6yImDDUKxwg0CI.webp">
+                <img src="/storage/1/JExh4RAfDNEa-qYkEK6yImDDUKxwg0CI.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Закуски</span>
+            </a>
+                      </li>
+                  <li data-category-id="7" class="menu__item">
+            <a href="/shop/salatyi" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/0g0DiyH67_oJCE9SR0R1l5uzVWQQO_4-.webp">
+                <img src="/storage/1/0g0DiyH67_oJCE9SR0R1l5uzVWQQO_4-.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Салаты</span>
+            </a>
+                      </li>
+                  <li data-category-id="9" class="menu__item">
+            <a href="/shop/supyi" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/LwIkK2aBunodLhC9mhTVYqd7X0BjIfp9.webp">
+                <img src="/storage/1/LwIkK2aBunodLhC9mhTVYqd7X0BjIfp9.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Супы</span>
+            </a>
+                      </li>
+                  <li data-category-id="95" class="menu__item">
+            <a href="/shop/dlya_bolshih_kompaniy" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/F8k2jzC0ULxYmytQUcNsD3aCeUDCOGpq.webp">
+                <img src="/storage/1/F8k2jzC0ULxYmytQUcNsD3aCeUDCOGpq.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Пивные сеты</span>
+            </a>
+                      </li>
+                  <li data-category-id="83" class="menu__item">
+            <a href="/shop/ryba" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/1PqB6HbHQ8FHOjoRin2DHAkR5i-LcrW4.webp">
+                <img src="/storage/1/1PqB6HbHQ8FHOjoRin2DHAkR5i-LcrW4.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Рыба</span>
+            </a>
+                      </li>
+                  <li data-category-id="78" class="menu__item">
+            <a href="/shop/shashliki_i_mangal" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/205LvFtFZMg-2riaA3iUx8zJYhIUKAc9.webp">
+                <img src="/storage/1/205LvFtFZMg-2riaA3iUx8zJYhIUKAc9.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Блюда с мангала</span>
+            </a>
+                      </li>
+                  <li data-category-id="113" class="menu__item">
+            <a href="/shop/goracee" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/-oCj3_xZsH9yzw60XpRP8UH9aW4S9AwC.webp">
+                <img src="/storage/1/-oCj3_xZsH9yzw60XpRP8UH9aW4S9AwC.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Горячее</span>
+            </a>
+                      </li>
+                  <li data-category-id="194" class="menu__item">
+            <a href="/shop/pasty" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/-9aTTEPiHf7dJT1cesINSntsQ29nVa0f.webp">
+                <img src="/storage/1/-9aTTEPiHf7dJT1cesINSntsQ29nVa0f.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Пасты</span>
+            </a>
+                      </li>
+                  <li data-category-id="198" class="menu__item">
+            <a href="/shop/kolbaski" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/egZdu1-TyXvhu_zCi-tUkluDgRoU129B.webp">
+                <img src="/storage/1/egZdu1-TyXvhu_zCi-tUkluDgRoU129B.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Колбаски к пиву</span>
+            </a>
+                      </li>
+                  <li data-category-id="167" class="menu__item">
+            <a href="/shop/garniry-i-sousy" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/jqQW6DwHbYUv1H_1yWAahFZamx2GkZ2x.webp">
+                <img src="/storage/1/jqQW6DwHbYUv1H_1yWAahFZamx2GkZ2x.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Гарниры и соусы</span>
+            </a>
+                      </li>
+                  <li data-category-id="115" class="menu__item">
+            <a href="/shop/desertyi" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/4vytHcRdeLafMFVee_utBrCTKC1ED2FA.webp">
+                <img src="/storage/1/4vytHcRdeLafMFVee_utBrCTKC1ED2FA.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Десерты</span>
+            </a>
+                      </li>
+                  <li data-category-id="202" class="menu__item">
+            <a href="/shop/detskoye_menyu" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/SB5cdw3Bz5cJ7yPaUYvF5m1jucM1WAEX.webp">
+                <img src="/storage/1/SB5cdw3Bz5cJ7yPaUYvF5m1jucM1WAEX.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Детское меню</span>
+            </a>
+                      </li>
+                  <li data-category-id="205" class="menu__item">
+            <a href="/shop/lanci" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/Q6ZE_66aA9ZRHpUCXAwgh4OhjLVLmEPS.webp">
+                <img src="/storage/1/Q6ZE_66aA9ZRHpUCXAwgh4OhjLVLmEPS.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Ланчи</span>
+            </a>
+                      </li>
+                  <li data-category-id="20" class="menu__item">
+            <a href="/shop/napitki" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/k6e5uuT88bOUrIfKsV_X2QwA7J88RaX6.webp">
+                <img src="/storage/1/k6e5uuT88bOUrIfKsV_X2QwA7J88RaX6.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Напитки</span>
+            </a>
+                      </li>
+                  <li data-category-id="207" class="menu__item">
+            <a href="/shop/dogotov" class="menu__link">
+            <div class="category-image-container">
+              <picture>
+                <source type="image/webp" srcset="/storage/1/HihzpFF86GunVzkprNVGTaPyTOeKxWED.webp">
+                <img src="/storage/1/HihzpFF86GunVzkprNVGTaPyTOeKxWED.jpg" alt="" class="menu__image category-image" />
+              </picture>
+            </div>
+              <span class="menu__title">Доготовь!</span>
+            </a>
+                      </li>
+              </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="r_p_banner">
+  <picture>
+    <source type="image/webp" srcset="/images/restaurants_page_banner.webp">
+    <img src="/images/restaurants_page_banner.jpg" alt="banner">
+  </picture>
+  </div>
+  <div class="js-map js-map--switcher map map--map">
+        <!--div class="map__switcher">
+          <span class="map__title">Рестораны</span>
+          <ul class="map-switcher">
+            <li class="js-map--switcher-button map-switcher__item map-switcher__item--active" data-view="map"><span class="map-switcher__value">На карте</span></li>
+            <li class="js-map--switcher-button map-switcher__item" data-view="list"><span class="map-switcher__value">Списком</span></li>
+          </ul>
+        </div-->
+        <div class="map__aside">
+          <ul class="map-restaurants">
+                        <li class="js-map--find map-restaurants__item" data-id="3">
+                            <span class="map-restaurants__title">Варшавское ш., д. 86</span>
+            </li>
+                        <li class="js-map--find map-restaurants__item" data-id="4">
+                            <span class="map-restaurants__title">ул. Перерва,58</span>
+            </li>
+                        <li class="js-map--find map-restaurants__item" data-id="8">
+                            <span class="map-restaurants__title">Боровское шоссе, д. 31 (Солнцево)</span>
+            </li>
+                        <li class="js-map--find map-restaurants__item" data-id="10">
+                            <span class="map-restaurants__title">ул. Липецкая, д. 2 к. 8</span>
+            </li>
+                        <li class="js-map--find map-restaurants__item" data-id="14">
+                            <span class="map-restaurants__title">ул. Космонавтов, 15</span>
+            </li>
+                        <li class="js-map--find map-restaurants__item" data-id="15">
+                            <span class="map-restaurants__title">ул. Пришвина, 9</span>
+            </li>
+                      </ul>
+        </div>
+        <div id="map" class="map__container"></div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="section__wrapper">
+    <span class="section__title">Галерея</span>
+    <div class="section__content">
+      <div class="section__full-width">
+                <div class='gallery_box' style="background-image: url('/storage/instagram/full/1604673187___CHQLcveB7df___.webp');"  onClick="location.href = 'https://instagram.com/p/CHQLcveB7df/';">
+        </div>
+                <div class='gallery_box' style="background-image: url('/storage/instagram/full/1604673187___CHQLcveB7df___.jpg');"  onClick="location.href = 'https://instagram.com/p/CHQLcveB7df/';">
+        </div>
+                <div class='gallery_box' style="background-image: url('/storage/instagram/full/1604574423___CHNPEmnBKlJ___.webp');"  onClick="location.href = 'https://instagram.com/p/CHNPEmnBKlJ/';">
+        </div>
+                <div class='gallery_box' style="background-image: url('/storage/instagram/full/1604574423___CHNPEmnBKlJ___.jpg');"  onClick="location.href = 'https://instagram.com/p/CHNPEmnBKlJ/';">
+        </div>
+                <div style="clear: both;"></div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!--<div class="js-map js-map--switcher map map--map">
+  <div class="map__switcher">
+    <span class="map__title">Рестораны</span>
+    <ul class="map-switcher">
+      <li class="js-map--switcher-button map-switcher__item map-switcher__item--active" data-view="map"><span class="map-switcher__value">На карте</span></li>
+      <li class="js-map--switcher-button map-switcher__item" data-view="list"><span class="map-switcher__value">Списком</span></li>
+    </ul>
+  </div>
+  <div class="map__aside">
+    <ul class="map-restaurants">
+            <li class="js-map--find map-restaurants__item" data-id="3">
+                <span class="map-restaurants__title">Варшавское ш., д. 86</span>
+      </li>
+            <li class="js-map--find map-restaurants__item" data-id="4">
+                <span class="map-restaurants__title">ул. Перерва,58</span>
+      </li>
+            <li class="js-map--find map-restaurants__item" data-id="8">
+                <span class="map-restaurants__title">Боровское шоссе, д. 31 (Солнцево)</span>
+      </li>
+            <li class="js-map--find map-restaurants__item" data-id="10">
+                <span class="map-restaurants__title">ул. Липецкая, д. 2 к. 8</span>
+      </li>
+            <li class="js-map--find map-restaurants__item" data-id="14">
+                <span class="map-restaurants__title">ул. Космонавтов, 15</span>
+      </li>
+            <li class="js-map--find map-restaurants__item" data-id="15">
+                <span class="map-restaurants__title">ул. Пришвина, 9</span>
+      </li>
+          </ul>
+  </div>
+  <div id="map" class="map__container"></div>
+</div>-->
+  </main>
+
+
+
+<div id="seoText">
+  <div class="seo_text_info">
+
+    <h1>Пивной ресторан Ёрш</h1>
+<p>Гостеприимность и изысканность — в лучших традициях пивного ресторана «Ёрш»! Добро пожаловать на сайт пивного ресторана «Ёрш». Перед вами – целый мир свежего пива, где поднимаются горы густой ароматной пены над сверкающими пивными бокалами, где изысканные салаты соревнуются в оригинальности с гарнирами, где пахнут пряностями блюда с мангала, приготовленные с любовью для вас шеф-поварами. </p><p>Меню одной из крупнейших сетей пивных ресторанов Москвы состоит из новых и традиционных, но непременно аппетитных блюд: мясных и овощных, куриных и рыбных, с деликатесными соусами и острыми приправами, в ослепительном окружении каперсов, маслин и душистой зелени. Буйство вкусовых оттенков выливается в гастрономическую симфонию банкетных блюд нашего ресторана. В сочетании с крафтовым пенным напитком каждое блюдо раскрывается по-особенному. Убедитесь сами. </p><p>Испробуйте нежное рыбное филе, пленитесь темпераментностью пряной курицы, а затем насладитесь вкусом воздушных десертов или фруктового ассорти. Пивной ресторан «Ёрш» в Москве— это место, где в приятной беседе время летит незаметно, где веселье соседствует с вдохновением, где можно провести деловую встречу или встретиться с друзьями. </p><p>Здесь всегда уютно и по-домашнему комфортно, а сотрудники ресторана неизменно вежливы и предупредительны. Узнайте наши адреса и ознакомьтесь с условиями доставки на сайте пивного ресторана «Ёрш», приходите к нам в гости. Каждый ресторан сети – это весёлое место, где вас ожидает потрясающая кухня, прохладные напитки, уютная обстановка и хорошее настроение. </p>
+
+  <div style="clear:both;"></div>
+</div>
+
+  </div>
+
+
+<div id="cities_hidden" style="display: none">[{"fieldName":"city","name":"\u041c\u043e\u0441\u043a\u0432\u0430","value":"1","checked":true}]</div>
+    <footer itemscope itemtype="http://schema.org/Organization" class="footer">
+    <div class="footer__wrapper">
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="footer__cities">
+        <ul class="footer-cities">
+          <li class="footer-cities__item"><span itemprop="addressLocality" class="footer-cities__title">Москва</span><!--<img src="/images/white-down.svg" alt="" class="footer-cities__icon">--></li>
+          <li class="footer-cities__item"><a href="" class="footer-cities__link">Пермь</a></li>
+        </ul>
+      </div>
+        <div itemprop="telephone" class="footer__phones call_phone_footer"><a href="tel:+74996492223" class="footer__link">+7 (499) 649-2-223</a></div>
+    
+      <div class="footer__socials">
+        <ul class="socials">
+          <li class="socials__item"><a href="https://vk.com/ersh.restoran" class="socials__link"><img src="/images/white-vkontakte.svg" alt="" class="socials__icon"></a></li>
+          <li class="socials__item"><a href="https://www.facebook.com/ersh.restoran/" class="socials__link"><img src="/images/white-facebook.svg" alt="" class="socials__icon"></a></li>
+          <li class="socials__item"><a href="https://www.instagram.com/ersh.restoran/" class="socials__link"><img src="/images/white-instagram.svg" alt="" class="socials__icon"></a></li>
+        </ul>
+      </div>
+      <div class="footer__copyrights"><span class="footer__description">© 2006 — 2021 <span itemprop="name">Пивные рестораны Ёрш</span></span></div>
+      <div class="footer__policy">
+        <a href="/page/privacy" class="footer__link">Политика конфиденциальности</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/jobs" class="footer__link">Вакансии</a>
+              </div>
+    </div>
+  </footer>
+  </div>
+<script src="/assets/51ca776c/jquery.js?v=1490036520"></script>
+<script src="/assets/20e579fc/index.js?v=1579006127"></script>
+<script src="/assets/20e579fc/main.js?v=1580826482"></script>
+<script src="/assets/de1fbdff/dist/owl.carousel.min.js?v=1524230530"></script>
+<script>jQuery(function ($) {
+
+$('.js-homepage--promo').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    items:1,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    dots: false,
+    responsive:{
+      769:{
+    dots: true,
+      }
+    }
+  });
+  $('.js-homepage--gallery').owlCarousel({
+    margin:0,
+    nav:false,
+    responsive:{
+      0: {
+        loop:true,
+        center: true,
+        autoWidth:true
+      },
+      1239:{
+        loop:false,
+        items:4
+      }
+    }
+  });
+
+});</script></body>
+</html>
