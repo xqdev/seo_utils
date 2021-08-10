@@ -9,9 +9,9 @@ import { chunk, take } from 'lodash';
 const main = async (): Promise<void> => {
     const sitemapChunks: string[][] = chunk(extractUrlsFromSitemap((await axios.get('https://ersh.su/sitemap.xml')).data), 5)
 
-    let result: { url: string, seo: SeoMetadata }[] = []
-
+    
     for (let sitemapChunk of sitemapChunks) {
+        let result: { url: string, seo: SeoMetadata }[] = []
         for (let url of sitemapChunk) {
             while(true) {
                 try {
@@ -27,7 +27,7 @@ const main = async (): Promise<void> => {
         transform(result, (data) => {
             return { url: data.url, ...data.seo };
         }).pipe(
-            stringify({ columns: { url: 'url', title: 'title', description: 'description', keywords: 'keywords' }, header: true })
+            stringify({ columns: { url: 'url', title: 'title', description: 'description', keywords: 'keywords' }, header: false })
         ).pipe(process.stdout)
     }
 
